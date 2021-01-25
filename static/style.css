@@ -1,0 +1,14 @@
+body {
+  font-family: courier;
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,224,253,0.08476894175639005) 100%);
+}
+
+input {
+  background: none;
+  font-family: courier;
+  font-size: 1.1em;
+  padding: 5px;
+  border-radius: 10px;
+/*   border: 1px solid black; */
+}

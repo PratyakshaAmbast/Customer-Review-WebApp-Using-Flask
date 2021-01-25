@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Italian Tourist</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type = "text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type = "text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type = "text/javascript"  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body style="background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,224,253,0.08476894175639005) 100%);">
+    <div class="container">
+    <h1 style="color:bisque; text-shadow:2px 3px green">
+      <center>CUSTOMER REVIEW WEBAPP</center>
+      <hr>
+    </h1>
+    </div>
+    <div class="container">
+    <h2 style="color:white; text-shadow:2px 3px green">
+    Submit your product review!
+</h2>
+<form method="post" action="/submit">
+    <p>Customer Name: <input type="text" name="name"></p>
+    <p>Product Name: <input type="text" name="review"></p>
+    <p>Product Review: <input type="text" name="pro"></p>
+    <p><button type="button" class="btn btn-success">   
+      <input type="submit"></button></p>
+</form>
+    </div>
+    <hr>
+<!--     {% for place in places %}
+    <p>
+      <b>Customer Name</b>: {{ place.name }}
+    </p>
+    <p>
+      <b>Product Name</b>: {{ place.review }}
+    </p>
+    <p>
+      <b>Product Review</b>:{{ place.pro }}
+    </p>
+{% endfor %} -->
+    
+    
+    <div class="container"><em>
+  <h2 style="color:white; text-shadow:2px 3px green">Previous Reviews</h2>
+  <p>Our Popular Review!!</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr style="color:white">
+        <th>Customer Name</th>
+        <th>Product Name</th>
+        <th>Product Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for place in places %}
+      <tr>
+        <td>{{ place.name }}</td>
+        <td>{{ place.review }}</td>
+        <td>{{ place.pro }}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+      </em>
+</div>
+    
+
+  </body>
+</html>
