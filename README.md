@@ -1,1 +1,1 @@
-# Customer-Review-WebApp-Using-Flask
+# Python Flask project
